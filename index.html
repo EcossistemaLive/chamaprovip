@@ -144,8 +144,7 @@ Quer ganhar um Vale-Consumo ou Prêmios Especiais?
 👉 Adicione 3 amigos
 👉 Pronto! Você já está participando 🍀
 
-Quanto mais amigos, mais chances!
-Link na bio 👆</pre>
+Quanto mais amigos, mais chances!</pre>
                 <button onclick="copiarTexto()" class="absolute top-2 right-2 bg-brand-primary hover:bg-blue-800 text-white text-xs px-4 py-2 rounded shadow transition flex items-center gap-2">
                     <i class="far fa-copy"></i> Copiar
                 </button>
@@ -156,34 +155,19 @@ Link na bio 👆</pre>
         </div>
     </section>
 
-    <!-- FORMULÁRIO (IFRAME CORRIGIDO) -->
+    <!-- BOTÃO DE AÇÃO (FORMULÁRIO EXTERNO) -->
     <section id="participar" class="w-full bg-blue-50 py-16">
-        <div class="max-w-4xl mx-auto px-2 md:px-4">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-extrabold text-brand-primary">Envie seu Comprovante</h2>
-                <p class="text-gray-600 mt-2">Preencha o formulário abaixo para validar.</p>
-            </div>
-
-            <!-- 
-               CORREÇÃO DE LAYOUT:
-               1. Altura aumentada para 2000px para evitar cortes.
-               2. Fundo branco com bordas arredondadas.
-               3. Scrolling permitido caso o form cresça demais.
-            -->
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden relative">
-                <iframe 
-                    src="https://docs.google.com/forms/d/e/1FAIpQLScxAzm5X1mujGUi5-5Yhbvl-v2b_GFjOb6lN2gYlsU9MK0L4g/viewform?embedded=true" 
-                    width="100%" 
-                    height="2000" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0"
-                    scrolling="yes"
-                    class="w-full border-none"
-                    title="Formulário de Inscrição">
-                    Carregando…
-                </iframe>
-            </div>
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold text-brand-primary mb-4">Envie seu Comprovante</h2>
+            <p class="text-gray-600 mb-8 max-w-lg mx-auto">Já tirou o print adicionando a galera? Clique no botão abaixo para preencher o formulário e garantir sua participação.</p>
+            
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScxAzm5X1mujGUi5-5Yhbvl-v2b_GFjOb6lN2gYlsU9MK0L4g/viewform" 
+               target="_blank"
+               class="inline-block bg-brand-secondary text-brand-dark font-black text-xl px-8 py-5 rounded-full shadow-xl hover:bg-yellow-400 hover:scale-105 hover:shadow-2xl transition transform w-full md:w-auto">
+                <i class="fas fa-paper-plane mr-2"></i> PREENCHER FORMULÁRIO AGORA
+            </a>
+            
+            <p class="text-xs text-gray-400 mt-4">Você será redirecionado para o Google Forms seguro.</p>
         </div>
     </section>
 
