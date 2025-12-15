@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio Goianita - Chama a Galera pro VIP</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Configuração de Cores (Paleta Goianita - Ajustável) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#D94F04',    /* Laranja Queimado (Típico de Goianita/Comida) */
+                            secondary: '#F2A900',  /* Amarelo Ouro */
+                            dark: '#3E2723',       /* Marrom Café */
+                            light: '#FFF8E1',      /* Creme Suave */
+                            accent: '#2E7D32'      /* Verde Folha */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Animação suave para o botão de copiar */
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(46, 125, 50, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
+        }
+        .animate-pulse-green {
+            animation: pulse-green 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark font-sans leading-relaxed">
+
+    <!-- CABEÇALHO -->
+    <header class="bg-brand-primary text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo Placeholder (Substitua src pela URL da sua imagem se tiver hospedada) -->
+            <div class="flex items-center gap-2">
+                <div class="bg-white p-1 rounded-full w-10 h-10 flex items-center justify-center text-brand-primary font-bold shadow-sm">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <span class="font-bold text-xl tracking-wide">GOIANITA</span>
+            </div>
+            <a href="#participar" class="bg-brand-secondary text-brand-dark px-4 py-1.5 rounded-full text-sm font-bold shadow hover:bg-yellow-300 transition transform hover:scale-105">
+                Participar Agora
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-b from-brand-primary to-orange-700 text-white pt-10 pb-16 px-4 text-center rounded-b-[3rem] shadow-xl overflow-hidden">
+        <!-- Elementos decorativos de fundo -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <i class="fas fa-gift absolute top-10 left-10 text-6xl"></i>
+            <i class="fas fa-clover absolute bottom-10 right-10 text-8xl"></i>
+            <i class="fas fa-users absolute top-20 right-20 text-5xl"></i>
+        </div>
+
+        <div class="relative z-10 max-w-2xl mx-auto">
+            <span class="bg-brand-secondary text-brand-dark text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-sm">
+                Sorteio Oficial
+            </span>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-md leading-tight">
+                Chama a Galera pro <br><span class="text-brand-secondary">Grupo VIP!</span>
+            </h1>
+            <p class="text-lg md:text-xl opacity-90 mb-8 font-light">
+                Aumente suas chances de ganhar prêmios incríveis indicando amigos.
+            </p>
+
+            <!-- CARD DO PRÊMIO -->
+            <div class="bg-white text-brand-dark p-6 rounded-2xl shadow-2xl transform hover:-translate-y-1 transition duration-300 border-b-4 border-brand-secondary">
+                <h3 class="text-brand-primary font-bold text-sm uppercase mb-2">🏆 Prêmio Especial</h3>
+                <div class="text-2xl md:text-3xl font-black mb-2 flex items-center justify-center gap-2">
+                    <i class="fas fa-star text-brand-secondary"></i>
+                    <span>VALE-CONSUMO</span>
+                    <i class="fas fa-star text-brand-secondary"></i>
+                </div>
+                <p class="text-gray-600 text-sm">Escolha entre R$100 em produtos ou uma Experiência Exclusiva!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO PARTICIPAR (MECÂNICA) -->
+    <section class="max-w-3xl mx-auto px-4 py-12 -mt-8 relative z-20">
+        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-gray-100">
+            <h2 class="text-2xl font-bold text-center text-brand-primary mb-8">
+                <i class="fas fa-check-circle mr-2"></i>Como Participar
+            </h2>
+
+            <div class="space-y-6">
+                <!-- Passo 1 -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-green-100 text-green-600 w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                    <div>
+                        <h4 class="font-bold text-lg">Entre no Grupo VIP</h4>
+                        <p class="text-gray-600 text-sm">Se você ainda não está lá, entre agora para concorrer.</p>
+                    </div>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-blue-100 text-blue-600 w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                    <div>
+                        <h4 class="font-bold text-lg">Adicione 3 Amigos</h4>
+                        <p class="text-gray-600 text-sm">Vá nas configurações do grupo e adicione pelo menos 3 contatos.</p>
+                    </div>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-purple-100 text-purple-600 w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                    <div>
+                        <h4 class="font-bold text-lg">Envie o Print</h4>
+                        <p class="text-gray-600 text-sm">Tire um print mostrando que você adicionou ("Você adicionou Fulano...") e anexe no formulário abaixo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REGRA EXTRA -->
+            <div class="mt-8 bg-brand-light border-2 border-brand-secondary border-dashed rounded-xl p-5 text-center">
+                <h4 class="text-brand-primary font-bold text-lg mb-2">🍀 Acelerador de Sorte</h4>
+                <p class="text-brand-dark text-sm mb-3">
+                    Cada amigo adicionado vale <strong>1 número da sorte extra</strong>!
+                </p>
+                <div class="flex justify-center gap-4 text-xs font-bold text-gray-500">
+                    <span class="bg-white px-2 py-1 rounded shadow-sm">3 Amigos = 3 Chances</span>
+                    <span class="bg-white px-2 py-1 rounded shadow-sm">10 Amigos = 10 Chances</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREA DE AJUDA NA DIVULGAÇÃO (STATUS) -->
+    <section class="bg-gray-50 py-10 border-t border-b border-gray-200">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <h3 class="text-xl font-bold text-gray-700 mb-4">📢 Quer dar uma força?</h3>
+            <p class="text-sm text-gray-500 mb-6">Copie o texto abaixo e poste no seu Status ou Stories para avisar a galera.</p>
+            
+            <div class="bg-white p-4 rounded-lg shadow-inner border border-gray-200 text-left relative group">
+                <pre class="whitespace-pre-wrap font-sans text-sm text-gray-600" id="texto-divulgacao">🎁 SORTEIO NO GRUPO VIP GOIANITA!
+Quer ganhar um Vale-Consumo ou Prêmios Especiais?
+
+👉 Entre no nosso Grupo VIP
+👉 Adicione 3 amigos
+👉 Pronto! Você já está participando 🍀
+
+Quanto mais amigos, mais chances!
+Link na bio 👆</pre>
+                <button onclick="copiarTexto()" class="absolute top-2 right-2 bg-brand-primary hover:bg-brand-dark text-white text-xs px-3 py-1.5 rounded shadow transition flex items-center gap-1">
+                    <i class="far fa-copy"></i> Copiar
+                </button>
+            </div>
+            <div id="msg-copiado" class="hidden mt-2 text-green-600 text-sm font-bold">
+                <i class="fas fa-check"></i> Texto copiado! Cole no seu WhatsApp.
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO (IFRAME) -->
+    <section id="participar" class="max-w-3xl mx-auto px-4 py-16">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-extrabold text-brand-primary">Envie seu Comprovante</h2>
+            <p class="text-gray-500">Preencha abaixo para validar sua participação.</p>
+        </div>
+
+        <div class="relative bg-white rounded-xl shadow-2xl overflow-hidden" style="min-height: 800px;">
+            <!-- Loading Indicator -->
+            <div class="absolute inset-0 flex items-center justify-center bg-gray-50 z-0">
+                <i class="fas fa-spinner fa-spin text-4xl text-brand-primary opacity-50"></i>
+            </div>
+            
+            <!-- Google Form Iframe -->
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLScxAzm5X1mujGUi5-5Yhbvl-v2b_GFjOb6lN2gYlsU9MK0L4g/viewform?embedded=true" 
+                width="100%" 
+                height="1000" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0" 
+                class="relative z-10 w-full h-full"
+                title="Formulário de Inscrição">
+                Carregando…
+            </iframe>
+        </div>
+    </section>
+
+    <!-- REGRAS -->
+    <section class="max-w-2xl mx-auto px-6 py-8 text-center">
+        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Regras Importantes</h3>
+        <ul class="text-xs text-gray-500 space-y-2">
+            <li>• Só vale adicionar pessoas que aceitem ficar no grupo.</li>
+            <li>• Perfis falsos ou números repetidos causarão desclassificação imediata.</li>
+            <li>• O grupo é silencioso e focado apenas em ofertas exclusivas.</li>
+        </ul>
+        <div class="mt-8 text-brand-primary font-bold">
+            <i class="far fa-calendar-alt"></i> Sorteio ao vivo nos Stories!
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white/80 text-center py-6 mt-8">
+        <p class="text-sm">Goianita &copy; 2025</p>
+        <p class="text-xs mt-1 opacity-50">Campanha de Indicação VIP</p>
+    </footer>
+
+    <!-- SCRIPT PARA COPIAR TEXTO -->
+    <script>
+        function copiarTexto() {
+            const texto = document.getElementById('texto-divulgacao').innerText;
+            
+            // Método moderno de copiar para clipboard
+            navigator.clipboard.writeText(texto).then(() => {
+                const msg = document.getElementById('msg-copiado');
+                msg.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    msg.classList.add('hidden');
+                }, 3000);
+            }).catch(err => {
+                console.error('Erro ao copiar: ', err);
+                alert('Selecione o texto manualmente para copiar.');
+            });
+        }
+    </script>
+</body>
+</html>
