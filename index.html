@@ -11,7 +11,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Configuração de Cores (Paleta Goianita - Ajustável) -->
+    <!-- Configuração de Cores (Paleta Goianita Oficial) -->
     <script>
         tailwind.config = {
             theme: {
@@ -20,9 +20,9 @@
                         brand: {
                             primary: '#2c3e72',    /* Azul Goianita Oficial */
                             secondary: '#F2A900',  /* Amarelo Ouro */
-                            dark: '#3E2723',       /* Marrom Café */
-                            light: '#FFF8E1',      /* Creme Suave */
-                            accent: '#2E7D32'      /* Verde Folha */
+                            dark: '#1a2542',       /* Azul Escuro Profundo */
+                            light: '#f3f4f6',      /* Cinza Suave */
+                            accent: '#2E7D32'      /* Verde Sucesso */
                         }
                     },
                     fontFamily: {
@@ -32,40 +32,27 @@
             }
         }
     </script>
-    
-    <style>
-        /* Animação suave para o botão de copiar */
-        @keyframes pulse-green {
-            0% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(46, 125, 50, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
-        }
-        .animate-pulse-green {
-            animation: pulse-green 2s infinite;
-        }
-    </style>
 </head>
-<body class="bg-brand-light text-brand-dark font-sans leading-relaxed">
+<body class="bg-gray-100 text-brand-dark font-sans leading-relaxed">
 
     <!-- CABEÇALHO -->
     <header class="bg-brand-primary text-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
             <!-- Logo Oficial Goianita -->
             <div class="flex items-center gap-2">
-                <img src="https://raw.githubusercontent.com/EcossistemaLive/Dashboard_goianita/refs/heads/main/Goianita.png" alt="Goianita Logo" class="h-12 w-auto object-contain bg-white rounded-md px-2 py-1">
+                <img src="https://raw.githubusercontent.com/EcossistemaLive/Dashboard_goianita/refs/heads/main/Goianita.png" alt="Goianita Logo" class="h-12 w-auto object-contain bg-white rounded px-2 py-1 shadow-sm">
             </div>
-            <a href="#participar" class="bg-brand-secondary text-brand-dark px-4 py-1.5 rounded-full text-sm font-bold shadow hover:bg-yellow-300 transition transform hover:scale-105">
-                Participar Agora
+            <a href="#participar" class="bg-brand-secondary text-brand-dark px-5 py-2 rounded-full text-sm font-bold shadow hover:bg-yellow-300 transition transform hover:scale-105 uppercase tracking-wide">
+                Participar
             </a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative bg-gradient-to-b from-brand-primary to-blue-900 text-white pt-10 pb-16 px-4 text-center rounded-b-[3rem] shadow-xl overflow-hidden">
-        <!-- Elementos decorativos de fundo -->
+    <!-- HERO SECTION (Topo) -->
+    <section class="relative bg-gradient-to-b from-brand-primary to-blue-900 text-white pt-12 pb-20 px-4 text-center rounded-b-[2.5rem] shadow-xl overflow-hidden">
+        <!-- Elementos decorativos -->
         <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-            <i class="fas fa-gift absolute top-10 left-10 text-6xl"></i>
-            <i class="fas fa-clover absolute bottom-10 right-10 text-8xl"></i>
+            <i class="fas fa-gift absolute top-10 left-10 text-6xl animate-bounce" style="animation-duration: 3s;"></i>
             <i class="fas fa-users absolute top-20 right-20 text-5xl"></i>
         </div>
 
@@ -76,81 +63,81 @@
             <h1 class="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-md leading-tight">
                 Chama a Galera pro <br><span class="text-brand-secondary">Grupo VIP!</span>
             </h1>
-            <p class="text-lg md:text-xl opacity-90 mb-8 font-light">
-                Aumente suas chances de ganhar prêmios incríveis indicando amigos.
+            <p class="text-lg md:text-xl opacity-90 mb-8 font-light text-blue-100">
+                Quanto mais amigos você indicar, mais chances de ganhar.
             </p>
 
             <!-- CARD DO PRÊMIO -->
-            <div class="bg-white text-brand-dark p-6 rounded-2xl shadow-2xl transform hover:-translate-y-1 transition duration-300 border-b-4 border-brand-secondary">
+            <div class="bg-white text-brand-dark p-6 rounded-2xl shadow-2xl transform hover:-translate-y-1 transition duration-300 border-b-4 border-brand-secondary mx-4">
                 <h3 class="text-brand-primary font-bold text-sm uppercase mb-2">🏆 Prêmio Especial</h3>
-                <div class="text-2xl md:text-3xl font-black mb-2 flex items-center justify-center gap-2">
-                    <i class="fas fa-star text-brand-secondary"></i>
+                <div class="text-2xl md:text-3xl font-black mb-2 flex flex-col md:flex-row items-center justify-center gap-2">
+                    <span class="text-brand-secondary"><i class="fas fa-star"></i></span>
                     <span>VALE-CONSUMO</span>
-                    <i class="fas fa-star text-brand-secondary"></i>
+                    <span class="text-brand-secondary"><i class="fas fa-star"></i></span>
                 </div>
                 <p class="text-gray-600 text-sm">Escolha entre R$100 em produtos ou uma Experiência Exclusiva!</p>
             </div>
         </div>
     </section>
 
-    <!-- COMO PARTICIPAR (MECÂNICA) -->
-    <section class="max-w-3xl mx-auto px-4 py-12 -mt-8 relative z-20">
+    <!-- COMO PARTICIPAR -->
+    <section class="max-w-3xl mx-auto px-4 py-12 -mt-10 relative z-20">
         <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-gray-100">
             <h2 class="text-2xl font-bold text-center text-brand-primary mb-8">
-                <i class="fas fa-check-circle mr-2"></i>Como Participar
+                <i class="fas fa-check-circle mr-2"></i>Passo a Passo
             </h2>
 
             <div class="space-y-6">
                 <!-- Passo 1 -->
                 <div class="flex items-start gap-4">
-                    <div class="bg-green-100 text-green-600 w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                    <div class="bg-brand-primary text-white w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center font-bold text-lg shadow">1</div>
                     <div>
-                        <h4 class="font-bold text-lg">Entre no Grupo VIP</h4>
-                        <p class="text-gray-600 text-sm">Se você ainda não está lá, entre agora para concorrer.</p>
+                        <h4 class="font-bold text-lg text-gray-800">Entre no Grupo VIP</h4>
+                        <p class="text-gray-600 text-sm">Entre no grupo para concorrer.</p>
                     </div>
                 </div>
 
                 <!-- Passo 2 -->
                 <div class="flex items-start gap-4">
-                    <div class="bg-blue-100 text-blue-600 w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                    <div class="bg-brand-primary text-white w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center font-bold text-lg shadow">2</div>
                     <div>
-                        <h4 class="font-bold text-lg">Adicione 3 Amigos</h4>
-                        <p class="text-gray-600 text-sm">Vá nas configurações do grupo e adicione pelo menos 3 contatos.</p>
+                        <h4 class="font-bold text-lg text-gray-800">Adicione 3 Amigos</h4>
+                        <p class="text-gray-600 text-sm">Vá nas opções do grupo e adicione seus amigos.</p>
                     </div>
                 </div>
 
                 <!-- Passo 3 -->
                 <div class="flex items-start gap-4">
-                    <div class="bg-purple-100 text-purple-600 w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                    <div class="bg-brand-primary text-white w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center font-bold text-lg shadow">3</div>
                     <div>
-                        <h4 class="font-bold text-lg">Envie o Print</h4>
-                        <p class="text-gray-600 text-sm">Tire um print mostrando que você adicionou ("Você adicionou Fulano...") e anexe no formulário abaixo.</p>
+                        <h4 class="font-bold text-lg text-gray-800">Envie o Print</h4>
+                        <p class="text-gray-600 text-sm">Tire um print provando a adição e envie abaixo.</p>
                     </div>
                 </div>
             </div>
 
             <!-- REGRA EXTRA -->
-            <div class="mt-8 bg-brand-light border-2 border-brand-secondary border-dashed rounded-xl p-5 text-center">
+            <div class="mt-8 bg-blue-50 border-2 border-brand-primary border-dashed rounded-xl p-5 text-center">
                 <h4 class="text-brand-primary font-bold text-lg mb-2">🍀 Acelerador de Sorte</h4>
-                <p class="text-brand-dark text-sm mb-3">
-                    Cada amigo adicionado vale <strong>1 número da sorte extra</strong>!
+                <p class="text-gray-700 text-sm mb-3">
+                    Cada amigo adicionado = <strong>1 cupom extra</strong>!
                 </p>
-                <div class="flex justify-center gap-4 text-xs font-bold text-gray-500">
-                    <span class="bg-white px-2 py-1 rounded shadow-sm">3 Amigos = 3 Chances</span>
-                    <span class="bg-white px-2 py-1 rounded shadow-sm">10 Amigos = 10 Chances</span>
+                <div class="flex justify-center flex-wrap gap-2 text-xs font-bold text-white">
+                    <span class="bg-green-600 px-3 py-1 rounded-full shadow">3 Amigos = 3 Chances</span>
+                    <span class="bg-green-600 px-3 py-1 rounded-full shadow">10 Amigos = 10 Chances</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ÁREA DE AJUDA NA DIVULGAÇÃO (STATUS) -->
-    <section class="bg-gray-50 py-10 border-t border-b border-gray-200">
+    <!-- ÁREA DE COPIAR TEXTO -->
+    <section class="bg-white py-10 border-t border-b border-gray-200">
         <div class="max-w-2xl mx-auto px-4 text-center">
-            <h3 class="text-xl font-bold text-gray-700 mb-4">📢 Quer dar uma força?</h3>
-            <p class="text-sm text-gray-500 mb-6">Copie o texto abaixo e poste no seu Status ou Stories para avisar a galera.</p>
+            <h3 class="text-xl font-bold text-brand-primary mb-2">📢 Ajude a Divulgar</h3>
+            <p class="text-sm text-gray-500 mb-6">Clique abaixo para copiar o texto e postar no seu Status.</p>
             
-            <div class="bg-white p-4 rounded-lg shadow-inner border border-gray-200 text-left relative group">
-                <pre class="whitespace-pre-wrap font-sans text-sm text-gray-600" id="texto-divulgacao">🎁 SORTEIO NO GRUPO VIP GOIANITA!
+            <div class="bg-gray-50 p-4 rounded-lg border border-gray-300 text-left relative shadow-inner">
+                <pre class="whitespace-pre-wrap font-sans text-sm text-gray-700" id="texto-divulgacao">🎁 SORTEIO NO GRUPO VIP GOIANITA!
 Quer ganhar um Vale-Consumo ou Prêmios Especiais?
 
 👉 Entre no nosso Grupo VIP
@@ -159,80 +146,63 @@ Quer ganhar um Vale-Consumo ou Prêmios Especiais?
 
 Quanto mais amigos, mais chances!
 Link na bio 👆</pre>
-                <button onclick="copiarTexto()" class="absolute top-2 right-2 bg-brand-primary hover:bg-brand-dark text-white text-xs px-3 py-1.5 rounded shadow transition flex items-center gap-1">
+                <button onclick="copiarTexto()" class="absolute top-2 right-2 bg-brand-primary hover:bg-blue-800 text-white text-xs px-4 py-2 rounded shadow transition flex items-center gap-2">
                     <i class="far fa-copy"></i> Copiar
                 </button>
             </div>
-            <div id="msg-copiado" class="hidden mt-2 text-green-600 text-sm font-bold">
-                <i class="fas fa-check"></i> Texto copiado! Cole no seu WhatsApp.
+            <div id="msg-copiado" class="hidden mt-3 bg-green-100 text-green-700 px-4 py-2 rounded text-sm font-bold inline-block animate-pulse">
+                <i class="fas fa-check"></i> Texto copiado!
             </div>
         </div>
     </section>
 
-    <!-- FORMULÁRIO (IFRAME) -->
-    <section id="participar" class="max-w-3xl mx-auto px-4 py-16">
-        <div class="text-center mb-8">
-            <h2 class="text-3xl font-extrabold text-brand-primary">Envie seu Comprovante</h2>
-            <p class="text-gray-500">Preencha abaixo para validar sua participação.</p>
-        </div>
-
-        <div class="relative bg-white rounded-xl shadow-2xl overflow-hidden" style="min-height: 1300px;">
-            <!-- Loading Indicator -->
-            <div class="absolute inset-0 flex items-center justify-center bg-gray-50 z-0">
-                <i class="fas fa-spinner fa-spin text-4xl text-brand-primary opacity-50"></i>
+    <!-- FORMULÁRIO (IFRAME CORRIGIDO) -->
+    <section id="participar" class="w-full bg-blue-50 py-16">
+        <div class="max-w-4xl mx-auto px-2 md:px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-extrabold text-brand-primary">Envie seu Comprovante</h2>
+                <p class="text-gray-600 mt-2">Preencha o formulário abaixo para validar.</p>
             </div>
-            
-            <!-- Google Form Iframe -->
-            <iframe 
-                src="https://docs.google.com/forms/d/e/1FAIpQLScxAzm5X1mujGUi5-5Yhbvl-v2b_GFjOb6lN2gYlsU9MK0L4g/viewform?embedded=true" 
-                width="100%" 
-                height="1500" 
-                frameborder="0" 
-                marginheight="0" 
-                marginwidth="0" 
-                class="relative z-10 w-full h-full"
-                title="Formulário de Inscrição">
-                Carregando…
-            </iframe>
-        </div>
-    </section>
 
-    <!-- REGRAS -->
-    <section class="max-w-2xl mx-auto px-6 py-8 text-center">
-        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Regras Importantes</h3>
-        <ul class="text-xs text-gray-500 space-y-2">
-            <li>• Só vale adicionar pessoas que aceitem ficar no grupo.</li>
-            <li>• Perfis falsos ou números repetidos causarão desclassificação imediata.</li>
-            <li>• O grupo é silencioso e focado apenas em ofertas exclusivas.</li>
-        </ul>
-        <div class="mt-8 text-brand-primary font-bold">
-            <i class="far fa-calendar-alt"></i> Sorteio ao vivo nos Stories!
+            <!-- 
+               CORREÇÃO DE LAYOUT:
+               1. Altura aumentada para 2000px para evitar cortes.
+               2. Fundo branco com bordas arredondadas.
+               3. Scrolling permitido caso o form cresça demais.
+            -->
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden relative">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScxAzm5X1mujGUi5-5Yhbvl-v2b_GFjOb6lN2gYlsU9MK0L4g/viewform?embedded=true" 
+                    width="100%" 
+                    height="2000" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    scrolling="yes"
+                    class="w-full border-none"
+                    title="Formulário de Inscrição">
+                    Carregando…
+                </iframe>
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-brand-dark text-white/80 text-center py-6 mt-8">
-        <p class="text-sm">Goianita &copy; 2025</p>
+    <footer class="bg-brand-primary text-white text-center py-8">
+        <img src="https://raw.githubusercontent.com/EcossistemaLive/Dashboard_goianita/refs/heads/main/Goianita.png" alt="Goianita Logo" class="h-8 mx-auto mb-4 opacity-50 filter brightness-0 invert">
+        <p class="text-sm opacity-80">Goianita &copy; 2025</p>
         <p class="text-xs mt-1 opacity-50">Campanha de Indicação VIP</p>
     </footer>
 
-    <!-- SCRIPT PARA COPIAR TEXTO -->
+    <!-- SCRIPT -->
     <script>
         function copiarTexto() {
             const texto = document.getElementById('texto-divulgacao').innerText;
-            
-            // Método moderno de copiar para clipboard
             navigator.clipboard.writeText(texto).then(() => {
                 const msg = document.getElementById('msg-copiado');
                 msg.classList.remove('hidden');
-                
-                setTimeout(() => {
-                    msg.classList.add('hidden');
-                }, 3000);
-            }).catch(err => {
-                console.error('Erro ao copiar: ', err);
-                alert('Selecione o texto manualmente para copiar.');
-            });
+                setTimeout(() => msg.classList.add('hidden'), 3000);
+            }).catch(err => alert('Copie manualmente o texto.'));
         }
     </script>
 </body>
